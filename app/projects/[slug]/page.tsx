@@ -74,31 +74,33 @@ export default async function ProjectPage({
               <dt className="mono-meta mb-1">Technologies</dt>
               <dd>{project.tech.join(" · ")}</dd>
             </div>
-            <div>
-              <dt className="mono-meta mb-1">Links</dt>
-              <dd className="flex gap-5">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-line text-accent"
-                  >
-                    GitHub ↗
-                  </a>
-                )}
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-line text-accent"
-                  >
-                    Live Demo ↗
-                  </a>
-                )}
-              </dd>
-            </div>
+            {(project.github || project.live) && (
+              <div>
+                <dt className="mono-meta mb-1">Links</dt>
+                <dd className="flex gap-5">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-line text-accent"
+                    >
+                      GitHub ↗
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-line text-accent"
+                    >
+                      Live Demo ↗
+                    </a>
+                  )}
+                </dd>
+              </div>
+            )}
           </dl>
         </Reveal>
       </header>

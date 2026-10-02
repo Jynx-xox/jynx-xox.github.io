@@ -9,8 +9,8 @@ export default function SectionHeading({
 }) {
   return (
     <Reveal>
-      <div className="mb-10 flex items-baseline gap-4 border-t border-line pt-4">
-        <span className="mono-meta">{index}</span>
+      <div className="section-heading mb-10 flex items-baseline gap-4 border-t border-line pt-4">
+        <span className="mono-meta text-accent">{index}</span>
         <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
           {title}
         </h2>

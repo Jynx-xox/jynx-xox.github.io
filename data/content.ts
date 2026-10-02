@@ -137,7 +137,7 @@ export const experience: ExperienceItem[] = [
     title: "B.S. Math–Computer Science",
     org: "University of California, San Diego — Class of 2030",
     coursework:
-      "CSE 11: Introduction to Programming & Computational Problem Solving (Accelerated), Multivariable Calculus, Differential Equations, Linear Algebra, Statistics",
+      "CSE 11: Accelerated Programming, Multivariable Calculus, Differential Equations, Linear Algebra, Statistics",
   },
   {
     period: "2025 — Present",
@@ -220,6 +220,6 @@ export const interests = {
     "Basketball",
     "Reading",
     "Hiking",
-    "Going out with friends",
+    "Surfing",
   ],
 };
