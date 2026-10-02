@@ -41,85 +41,85 @@ export const projects: Project[] = [
     title: "Wardrobe & Outfit Tracker",
     year: "2025",
     description:
-      "A place to keep track of clothes, put outfits together, and see what I wore.",
+      "A web application for organizing clothing, creating outfits, and maintaining outfit history.",
     role: "Solo developer",
     tech: ["React", "JavaScript", "Supabase"],
     live: "https://wardrobe-nine-snowy.vercel.app/",
     overview:
-      "I started this after moving away for college and wanting an easier way to share everyday stuff with friends — outfits included.",
+      "A social wardrobe application designed to make sharing everyday outfits with friends more engaging.",
     problem:
-      "My friends and I were farther apart, so the usual group-chat updates became less frequent. I wanted something a little more fun than sending a random outfit photo once in a while.",
+      "Distance made informal group-chat updates less frequent. The application provides a focused and interactive alternative to occasionally sharing outfit photos.",
     built:
-      "I put together logins, clothing-item management, outfit posts, daily fits, a calendar, following and followers, and likes. Friends can browse each other's outfits and clothing collections without jumping between different apps.",
+      "The application includes authentication, clothing-item management, outfit posts, daily outfits, calendar history, following, followers, and likes. Users can browse friends' outfits and clothing collections within one application.",
     decisions:
-      "I made it more social than a typical closet app. Supabase takes care of accounts and data, while the interface puts the clothes and outfit posts front and center.",
+      "The application was designed to be more social than a conventional closet tracker. Supabase manages authentication and data, while the interface keeps clothing and outfit posts central to the experience.",
     challenges:
-      "The tricky part was getting all the small pieces to work together: users, follows, clothes, posts, likes, and calendar history. Each feature was manageable on its own, but the app only felt good when the whole flow stayed simple.",
+      "The primary challenge was coordinating the related parts of the application: users, follows, clothing items, posts, likes, and calendar history. Each feature was manageable independently, but the overall experience depended on keeping the full workflow straightforward.",
     learned:
-      "This project showed me how quickly a small idea can turn into a real product once other people use it. I had to think about authentication, user-generated content, and the little details that make an app worth coming back to.",
+      "The project demonstrated how a small concept can develop into a complete product once other people begin using it. It required practical decisions around authentication, user-generated content, and the details that encourage continued engagement.",
   },
   {
     slug: "order-management",
     title: "Small Business Order Management Platform",
     year: "2025",
     description:
-      "A dashboard I made for my family's catering business to keep orders, payments, and pickup dates in one place.",
+      "An internal dashboard for managing customer orders, payments, and pickup dates for a family catering business.",
     role: "Solo developer",
     tech: ["Python", "Flask", "SQLite"], // private repo — no link
     overview:
-      "This replaced the collection of spreadsheets we were using to keep track of customer orders.",
+      "An internal application that replaced the collection of spreadsheets used to manage customer orders for the business.",
     problem:
-      "With 30+ customers, it was easy for an order or payment update to get buried in a spreadsheet. Finding a customer's information also took longer than it should have.",
+      "With more than 30 customers, order and payment updates could become difficult to locate in a spreadsheet. Retrieving customer information also required more time than necessary.",
     built:
-      "I added customer search, order filters, automatic totals, duplicate detection, AI-assisted order entry, and exports so the business could get to the information it needed faster.",
+      "The application includes customer search, order filters, automatic totals, duplicate detection, AI-assisted order entry, and data exports so the business can access key information more efficiently.",
     decisions:
-      "I used Flask and SQLite because this was an internal tool, not something that needed a huge stack. The main goal was to fit the way the business already worked instead of forcing everyone into a completely new process.",
+      "Flask and SQLite were selected because the application was an internal tool and did not require a large infrastructure stack. The primary goal was to support the existing workflow without forcing the business to adopt an entirely new process.",
     challenges:
-      "The hard part was turning an informal spreadsheet workflow into something structured without making it annoying to use. Customer names could repeat, orders changed, and AI-generated entries still needed to be checked before they were saved.",
+      "The main challenge was converting an informal spreadsheet workflow into a structured system without making it cumbersome to use. Customer names could repeat, orders could change, and AI-generated entries still required review before being saved.",
     learned:
-      "I got a better sense of what makes a tool useful in practice. Saving a few clicks is nice, but making information easier to trust and find is what actually helped.",
+      "The project strengthened the understanding of what makes an internal tool effective. Reducing clicks is useful, but improving the reliability and accessibility of information provides the greater benefit.",
   },
   {
     slug: "computer-vision-automation",
     title: "Real-Time Computer Vision Automation",
     year: "2025",
     description:
-      "A small computer-vision tool that spots quick-time events in games and presses the right key.",
+      "A computer-vision tool that detects quick-time events in games and provides the corresponding keyboard input.",
     role: "Solo developer",
     tech: ["Python", "OpenCV"], // private repo — no link
     overview:
-      "I built this to see how quickly a program could recognize an on-screen prompt and react to it.",
+      "A project evaluating how quickly a program could recognize an on-screen prompt and respond to it.",
     problem:
-      "Some game prompts only stay on screen for a moment. I wanted to test whether a camera-style computer-vision pipeline could catch them more consistently than manual input.",
+      "Some game prompts remain visible only briefly. The project evaluates whether a computer-vision pipeline can identify them more consistently than manual input.",
     built:
-      "The tool uses OpenCV for color detection and image analysis, watches specific parts of the screen, and sends the matching keyboard input when it finds an event.",
+      "The tool uses OpenCV for color detection and image analysis, monitors defined regions of the screen, and sends the corresponding keyboard input when it identifies an event.",
     decisions:
-      "I focused on small regions of the screen instead of processing everything. That cut down on unnecessary work and made it easier to tune the vision code separately from the keyboard controls.",
+      "Processing was limited to small regions of the screen rather than the entire display. This reduced unnecessary computation and allowed the vision logic to be tuned separately from the keyboard controls.",
     challenges:
-      "The balance was the difficult part. If detection was too sensitive, it reacted to things that were not prompts; if it was too strict, it missed events that only appeared briefly.",
+      "The central challenge was finding the appropriate detection threshold. Excessive sensitivity produced false positives, while overly strict conditions caused the system to miss prompts that appeared only briefly.",
     learned:
-      "This was a good introduction to the tradeoffs in real-time software. A change that improves accuracy can also add delay, and small timing differences can change the result completely.",
+      "The project introduced practical tradeoffs involved in real-time software. Improvements in accuracy can also introduce latency, and small timing differences can materially affect the result.",
   },
   {
     slug: "attendance-system",
     title: "Attendance Management System",
     year: "2024",
     description:
-      "A check-in site with accounts, duplicate prevention, and simple attendance filters.",
+      "An attendance application with account management, duplicate prevention, and administrative filtering.",
     role: "Solo developer",
     tech: ["Python", "Flask", "Supabase"], // private repo — no link
     overview:
-      "I made this for a community organization that needed a cleaner way to record attendance than paper sign-ins.",
+      "An attendance application developed for a community organization that needed a more reliable process than paper sign-ins.",
     problem:
-      "Manual sign-ins and scattered records made attendance harder to review than it needed to be. Participants needed a quick check-in, while organizers needed a reliable record afterward.",
+      "Manual sign-ins and fragmented records made attendance difficult to review. Participants needed a quick check-in process, while organizers needed a dependable record afterward.",
     built:
-      "I added account creation, login, digital check-in, user management, duplicate-entry prevention, date filters, and separate admin and general-user flows.",
+      "The application includes account creation, authentication, digital check-in, user management, duplicate-entry prevention, date filters, and separate administrator and general-user workflows.",
     decisions:
-      "Flask kept the app focused, while Supabase handled authentication and storage. I kept the normal check-in flow separate from the admin tools so most people could finish quickly without losing the controls organizers needed.",
+      "Flask kept the application focused, while Supabase handled authentication and storage. The standard check-in flow was separated from administrative tools so participants could complete the primary task quickly without removing the controls organizers needed.",
     challenges:
-      "The main challenge was handling the normal case and the messy cases at the same time: quick check-ins, accidental duplicates, and organizers needing to review or correct older records.",
+      "The primary challenge was supporting both the standard workflow and less predictable cases, including rapid check-ins, accidental duplicates, and the need to review or correct historical records.",
     learned:
-      "This gave me hands-on practice with authentication, roles, validation, and data that people actually depend on. It also reminded me that the most common action should usually be the easiest one.",
+      "The project provided practical experience with authentication, roles, validation, and data that users depend on. It also reinforced the importance of making the most common action the easiest one to complete.",
   },
 ];
 

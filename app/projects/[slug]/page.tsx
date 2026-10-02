@@ -23,10 +23,10 @@ const sections = (p: (typeof projects)[number]) =>
   [
     { label: "Overview", body: p.overview },
     { label: "Problem", body: p.problem },
-    { label: "What I made", body: p.built },
-    { label: "Why I built it this way", body: p.decisions },
-    { label: "What was tricky", body: p.challenges },
-    { label: "What I took away", body: p.learned },
+    { label: "Implementation", body: p.built },
+    { label: "Design decisions", body: p.decisions },
+    { label: "Challenges", body: p.challenges },
+    { label: "Key takeaways", body: p.learned },
   ] as const;
 
 export default async function ProjectPage({
