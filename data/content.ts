@@ -43,20 +43,20 @@ export const projects: Project[] = [
     description:
       "An interactive wardrobe app for organizing clothes, planning outfits, and tracking what you wore.",
     role: "Solo developer",
-    tech: ["React", "JavaScript"],
+    tech: ["React", "JavaScript", "Supabase"],
     live: "https://wardrobe-nine-snowy.vercel.app/",
     overview:
-      "An interactive wardrobe application for organizing clothing and tracking daily outfits.",
+      "A social wardrobe app for organizing clothing, sharing daily outfits, and staying connected with friends after starting college.",
     problem:
-      "I built this to stay connected with friends after starting college and living farther apart. It gives us a shared, lightweight way to see each other's daily fits and keep a small part of our day-to-day lives connected.",
+      "I built this to stay connected with friends after starting college and living farther apart. Instead of just sending occasional photos, we could share outfits, browse each other's fits, and keep up with a small part of everyday life.",
     built:
-      "Built a social wardrobe experience with accounts and logins, clothing-item profiles, daily fits, a calendar, friend feeds, following and followers, posts, and likes. Friends can scroll through each other's outfits and clothing collections in one place.",
+      "Built account creation and logins, clothing-item management, outfit posts, daily fits, a calendar, friend discovery through following and followers, and social interactions including likes. Friends can scroll through each other's outfits and clothing collections in one place.",
     decisions:
-      "Focused on making the app visual and social rather than text-heavy. The main flows — posting a fit, browsing friends' outfits, and adding clothing — are designed to feel quick and natural on the same timeline.",
+      "Designed the app around a social feed rather than a private closet. Supabase handles accounts and application data, while the interface keeps the visual parts — clothing, outfits, and daily posts — central to the experience.",
     challenges:
-      "The biggest challenge was connecting personal wardrobe data with social features without making the experience feel complicated. The app had to keep calendars, daily fits, posts, likes, follows, and account-specific content consistent as people moved between their own wardrobe and their friends' feeds.",
+      "The hardest part was connecting several user-facing systems into one coherent flow: accounts, friend relationships, clothing items, outfit posts, likes, and calendar history all needed to work together without making the app feel complicated.",
     learned:
-      "This project taught me how to turn a personal idea into a product people can actually use with friends. It also gave me experience thinking through authenticated users, social relationships, and the many small states behind a seemingly simple feed.",
+      "I learned how much product complexity can come from simple social features. Building this pushed me to think about authentication, user-generated content, relationships between users, and how to make a personal idea feel fun enough that friends would actually use it.",
   },
   {
     slug: "order-management",
@@ -71,30 +71,30 @@ export const projects: Project[] = [
     problem:
       "Order, payment, and pickup information for 30+ customers lived in spreadsheets, which made it easy to miss orders, miscalculate totals, or lose track of payment status.",
     built:
-      "Built the full application: customer search, order filtering, automated totals, duplicate detection, and CSV/Excel export for records.",
+      "Built the full application: customer search, order filtering, automated totals, duplicate detection, AI-assisted order entry, and exportable records for the business.",
     decisions:
-      "Chose Flask with SQLite for a lightweight, self-hosted tool that could fit the business's existing workflow without requiring a complicated deployment. The interface was designed around quick entry, clear order status, and easy retrieval of customer records.",
+      "Chose Flask with SQLite for a lightweight internal tool that could fit the business's existing workflow without requiring a complicated deployment. The AI-assisted entry flow was designed to turn loosely described order information into a consistent setup, while the main interface kept order status and customer records easy to review.",
     challenges:
-      "The main challenge was translating an informal, spreadsheet-based process into a structured workflow that still felt simple for non-technical users. I also had to account for duplicate customer names, changing order details, payment status, and exportable records.",
+      "The main challenge was translating an informal, spreadsheet-based process into a structured workflow that still felt simple for non-technical users. I also had to account for duplicate customer names, changing order details, payment status, and the need to check AI-generated entries before they became part of the business's records.",
     learned:
-      "I learned that useful software starts with understanding the user's actual process. A technically simple tool can create a lot of value when it removes repetitive entry and presents information in a way that matches how a business already operates.",
+      "I learned that useful software starts with understanding the user's actual process. A technically simple tool can save a lot of time when it removes repetitive entry, reduces avoidable mistakes, and still leaves the user in control of the final information.",
   },
   {
     slug: "computer-vision-automation",
     title: "Real-Time Computer Vision Automation",
     year: "2025",
     description:
-      "A real-time vision system that detects on-screen events and triggers automated inputs with low latency.",
+      "A real-time vision system for games that detects quick-time events and triggers keyboard inputs with low latency.",
     role: "Solo developer",
     tech: ["Python", "OpenCV"], // private repo — no link
     overview:
-      "A real-time computer vision system that watches for specific visual events and responds with automated keyboard input.",
+      "A real-time computer vision system for games that recognizes QTEs and other on-screen events, then responds with automated keyboard input.",
     problem:
-      "The system detects QTEs and other on-screen events that require quick responses. Manual input was inconsistent and sometimes inaccurate, so the project explored how computer vision could recognize those events and trigger a response more reliably.",
+      "The system detects quick-time events and other on-screen prompts in games that require fast responses. Manual input was inconsistent and sometimes inaccurate, so the project explored how computer vision could recognize those events and respond more reliably.",
     built:
-      "Built the detection pipeline with OpenCV image detection and region-based tracking, plus a configurable hotkey/macros layer for low-latency responses.",
+      "Built a color-detection and image-analysis pipeline with OpenCV, region-based tracking, and a configurable keyboard-input layer that presses the appropriate keys when recognized events appear.",
     decisions:
-      "Used region-based tracking instead of full-frame analysis to reduce unnecessary processing and focus detection on the parts of the screen where relevant events appear. The automation layer was kept configurable so detection and input behavior could be adjusted independently.",
+      "Used targeted screen regions and color-based detection instead of treating every pixel on the screen equally. This reduced unnecessary processing and kept the automation layer separate from the vision logic so both could be tuned independently.",
     challenges:
       "The main challenge was balancing responsiveness with reliability: detection thresholds needed to be sensitive enough to catch short-lived events without triggering on unrelated visual changes or producing duplicate responses.",
     learned:
@@ -107,15 +107,15 @@ export const projects: Project[] = [
     description:
       "A web-based check-in system with user management, duplicate prevention, and date filtering.",
     role: "Solo developer",
-    tech: ["Python", "Flask", "Excel"], // private repo — no link
+    tech: ["Python", "Flask", "Supabase"], // private repo — no link
     overview:
       "A web-based attendance system for managing and recording participant check-ins for a private community organization.",
     problem:
-      "The organization needed a more consistent way to record attendance than relying on manual sign-in and scattered records. The system gives participants a quick check-in flow while making attendance easier for organizers to review later.",
+      "The organization needed a more consistent way to record attendance than relying on manual sign-in and scattered records. The system gives participants a quick digital check-in flow while making attendance easier for organizers to review later.",
     built:
-      "Implemented QR-assisted check-in, user management, duplicate-entry prevention, date filtering, and attendance tracking, with separate admin and general-user functionality backed by persistent database storage.",
+      "Implemented digital check-in, account creation and login, user management, duplicate-entry prevention, date filtering, and attendance tracking, with separate admin and general-user functionality backed by Supabase.",
     decisions:
-      "Used Flask for a focused web application and separated the general check-in experience from administrative tools. Attendance records were stored in a structured format so organizers could filter dates, review participation, and export information when needed.",
+      "Used Flask for a focused web application and Supabase for hosted authentication and data storage. The general check-in experience was kept separate from administrative tools so participants could get through the common flow quickly while organizers retained control over attendance records.",
     challenges:
       "The hardest part was making check-in quick for participants while preventing duplicate records and preserving useful administrative controls. The system needed to handle the normal user flow and the less frequent cases where an organizer needed to correct or review attendance data.",
     learned:
@@ -220,6 +220,6 @@ export const interests = {
     "Basketball",
     "Reading",
     "Hiking",
-    "Spending time with friends",
+    "Going out with friends",
   ],
 };
