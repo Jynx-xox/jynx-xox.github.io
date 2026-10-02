@@ -41,85 +41,85 @@ export const projects: Project[] = [
     title: "Wardrobe & Outfit Tracker",
     year: "2025",
     description:
-      "An interactive wardrobe app for organizing clothes, planning outfits, and tracking what you wore.",
+      "A place to keep track of clothes, put outfits together, and see what I wore.",
     role: "Solo developer",
     tech: ["React", "JavaScript", "Supabase"],
     live: "https://wardrobe-nine-snowy.vercel.app/",
     overview:
-      "A social wardrobe app for organizing clothing, sharing daily outfits, and staying connected with friends after starting college.",
+      "I started this after moving away for college and wanting an easier way to share everyday stuff with friends — outfits included.",
     problem:
-      "I built this to stay connected with friends after starting college and living farther apart. Instead of just sending occasional photos, we could share outfits, browse each other's fits, and keep up with a small part of everyday life.",
+      "My friends and I were farther apart, so the usual group-chat updates became less frequent. I wanted something a little more fun than sending a random outfit photo once in a while.",
     built:
-      "Built account creation and logins, clothing-item management, outfit posts, daily fits, a calendar, friend discovery through following and followers, and social interactions including likes. Friends can scroll through each other's outfits and clothing collections in one place.",
+      "I put together logins, clothing-item management, outfit posts, daily fits, a calendar, following and followers, and likes. Friends can browse each other's outfits and clothing collections without jumping between different apps.",
     decisions:
-      "Designed the app around a social feed rather than a private closet. Supabase handles accounts and application data, while the interface keeps the visual parts — clothing, outfits, and daily posts — central to the experience.",
+      "I made it more social than a typical closet app. Supabase takes care of accounts and data, while the interface puts the clothes and outfit posts front and center.",
     challenges:
-      "The hardest part was connecting several user-facing systems into one coherent flow: accounts, friend relationships, clothing items, outfit posts, likes, and calendar history all needed to work together without making the app feel complicated.",
+      "The tricky part was getting all the small pieces to work together: users, follows, clothes, posts, likes, and calendar history. Each feature was manageable on its own, but the app only felt good when the whole flow stayed simple.",
     learned:
-      "I learned how much product complexity can come from simple social features. Building this pushed me to think about authentication, user-generated content, relationships between users, and how to make a personal idea feel fun enough that friends would actually use it.",
+      "This project showed me how quickly a small idea can turn into a real product once other people use it. I had to think about authentication, user-generated content, and the little details that make an app worth coming back to.",
   },
   {
     slug: "order-management",
     title: "Small Business Order Management Platform",
     year: "2025",
     description:
-      "A dashboard for a family catering business to manage orders, payments, and pickup dates across 30+ customers.",
+      "A dashboard I made for my family's catering business to keep orders, payments, and pickup dates in one place.",
     role: "Solo developer",
     tech: ["Python", "Flask", "SQLite"], // private repo — no link
     overview:
-      "An internal web dashboard built for a family catering business to replace scattered spreadsheets for tracking customer orders.",
+      "This replaced the collection of spreadsheets we were using to keep track of customer orders.",
     problem:
-      "Order, payment, and pickup information for 30+ customers lived in spreadsheets, which made it easy to miss orders, miscalculate totals, or lose track of payment status.",
+      "With 30+ customers, it was easy for an order or payment update to get buried in a spreadsheet. Finding a customer's information also took longer than it should have.",
     built:
-      "Built the full application: customer search, order filtering, automated totals, duplicate detection, AI-assisted order entry, and exportable records for the business.",
+      "I added customer search, order filters, automatic totals, duplicate detection, AI-assisted order entry, and exports so the business could get to the information it needed faster.",
     decisions:
-      "Chose Flask with SQLite for a lightweight internal tool that could fit the business's existing workflow without requiring a complicated deployment. The AI-assisted entry flow was designed to turn loosely described order information into a consistent setup, while the main interface kept order status and customer records easy to review.",
+      "I used Flask and SQLite because this was an internal tool, not something that needed a huge stack. The main goal was to fit the way the business already worked instead of forcing everyone into a completely new process.",
     challenges:
-      "The main challenge was translating an informal, spreadsheet-based process into a structured workflow that still felt simple for non-technical users. I also had to account for duplicate customer names, changing order details, payment status, and the need to check AI-generated entries before they became part of the business's records.",
+      "The hard part was turning an informal spreadsheet workflow into something structured without making it annoying to use. Customer names could repeat, orders changed, and AI-generated entries still needed to be checked before they were saved.",
     learned:
-      "I learned that useful software starts with understanding the user's actual process. A technically simple tool can save a lot of time when it removes repetitive entry, reduces avoidable mistakes, and still leaves the user in control of the final information.",
+      "I got a better sense of what makes a tool useful in practice. Saving a few clicks is nice, but making information easier to trust and find is what actually helped.",
   },
   {
     slug: "computer-vision-automation",
     title: "Real-Time Computer Vision Automation",
     year: "2025",
     description:
-      "A real-time vision system for games that detects quick-time events and triggers keyboard inputs with low latency.",
+      "A small computer-vision tool that spots quick-time events in games and presses the right key.",
     role: "Solo developer",
     tech: ["Python", "OpenCV"], // private repo — no link
     overview:
-      "A real-time computer vision system for games that recognizes QTEs and other on-screen events, then responds with automated keyboard input.",
+      "I built this to see how quickly a program could recognize an on-screen prompt and react to it.",
     problem:
-      "The system detects quick-time events and other on-screen prompts in games that require fast responses. Manual input was inconsistent and sometimes inaccurate, so the project explored how computer vision could recognize those events and respond more reliably.",
+      "Some game prompts only stay on screen for a moment. I wanted to test whether a camera-style computer-vision pipeline could catch them more consistently than manual input.",
     built:
-      "Built a color-detection and image-analysis pipeline with OpenCV, region-based tracking, and a configurable keyboard-input layer that presses the appropriate keys when recognized events appear.",
+      "The tool uses OpenCV for color detection and image analysis, watches specific parts of the screen, and sends the matching keyboard input when it finds an event.",
     decisions:
-      "Used targeted screen regions and color-based detection instead of treating every pixel on the screen equally. This reduced unnecessary processing and kept the automation layer separate from the vision logic so both could be tuned independently.",
+      "I focused on small regions of the screen instead of processing everything. That cut down on unnecessary work and made it easier to tune the vision code separately from the keyboard controls.",
     challenges:
-      "The main challenge was balancing responsiveness with reliability: detection thresholds needed to be sensitive enough to catch short-lived events without triggering on unrelated visual changes or producing duplicate responses.",
+      "The balance was the difficult part. If detection was too sensitive, it reacted to things that were not prompts; if it was too strict, it missed events that only appeared briefly.",
     learned:
-      "I learned how real-time systems require practical tradeoffs between accuracy, speed, and robustness. Small changes to regions, thresholds, and timing can significantly affect the behavior of an interactive automation tool.",
+      "This was a good introduction to the tradeoffs in real-time software. A change that improves accuracy can also add delay, and small timing differences can change the result completely.",
   },
   {
     slug: "attendance-system",
     title: "Attendance Management System",
     year: "2024",
     description:
-      "A web-based check-in system with user management, duplicate prevention, and date filtering.",
+      "A check-in site with accounts, duplicate prevention, and simple attendance filters.",
     role: "Solo developer",
     tech: ["Python", "Flask", "Supabase"], // private repo — no link
     overview:
-      "A web-based attendance system for managing and recording participant check-ins for a private community organization.",
+      "I made this for a community organization that needed a cleaner way to record attendance than paper sign-ins.",
     problem:
-      "The organization needed a more consistent way to record attendance than relying on manual sign-in and scattered records. The system gives participants a quick digital check-in flow while making attendance easier for organizers to review later.",
+      "Manual sign-ins and scattered records made attendance harder to review than it needed to be. Participants needed a quick check-in, while organizers needed a reliable record afterward.",
     built:
-      "Implemented digital check-in, account creation and login, user management, duplicate-entry prevention, date filtering, and attendance tracking, with separate admin and general-user functionality backed by Supabase.",
+      "I added account creation, login, digital check-in, user management, duplicate-entry prevention, date filters, and separate admin and general-user flows.",
     decisions:
-      "Used Flask for a focused web application and Supabase for hosted authentication and data storage. The general check-in experience was kept separate from administrative tools so participants could get through the common flow quickly while organizers retained control over attendance records.",
+      "Flask kept the app focused, while Supabase handled authentication and storage. I kept the normal check-in flow separate from the admin tools so most people could finish quickly without losing the controls organizers needed.",
     challenges:
-      "The hardest part was making check-in quick for participants while preventing duplicate records and preserving useful administrative controls. The system needed to handle the normal user flow and the less frequent cases where an organizer needed to correct or review attendance data.",
+      "The main challenge was handling the normal case and the messy cases at the same time: quick check-ins, accidental duplicates, and organizers needing to review or correct older records.",
     learned:
-      "I learned how authentication, roles, validation, and data organization come together in a workflow used by real people. It also reinforced the importance of making common actions fast while keeping administrative details accessible.",
+      "This gave me hands-on practice with authentication, roles, validation, and data that people actually depend on. It also reminded me that the most common action should usually be the easiest one.",
   },
 ];
 
@@ -137,42 +137,42 @@ export const experience: ExperienceItem[] = [
     title: "B.S. Math–Computer Science",
     org: "University of California, San Diego — Class of 2030",
     coursework:
-      "CSE 11: Accelerated Programming, Multivariable Calculus, Differential Equations, Linear Algebra, Statistics",
+      "CSE 11, Multivariable Calculus, Differential Equations, Linear Algebra, Statistics",
   },
   {
     period: "2025 — Present",
     title: "Software Developer",
     org: "Freelance",
     description:
-      "Build Python and automation tools for individuals and community members — custom keyboard macros, Flask-based utilities, and workflow automations for 10+ users based on their specific needs.",
+      "Build Python tools and small automations for people who need a repetitive task to be less repetitive.",
   },
   {
     period: "2023 — Present",
     title: "Technology & Operations Assistant",
     org: "Family Catering Business",
     description:
-      "Developed internal tools for order tracking, scheduling, and customer records across 30+ customers. Automated repetitive spreadsheet and administrative workflows with Python and Excel.",
+      "Built tools for order tracking, scheduling, and customer records, and automated some of the spreadsheet work that used to take up time.",
   },
   {
     period: "2025 — Present",
     title: "Team Member",
     org: "Hollister, Abercrombie & Fitch",
     description:
-      "Customer-facing retail role — product guidance, organized sales floor, and efficient, friendly service with the team.",
+      "Help customers find what they need, keep the floor organized, and work with the team during busy shifts.",
   },
   {
     period: "2024 — 2026",
     title: "Student Mentor",
     org: "James Logan Mentoring Program",
     description:
-      "Mentored high school students in math and computer science, volunteering 200+ hours through consistent weekly meetings.",
+      "Met with high school students each week to help with math, computer science, and whatever they were stuck on.",
   },
   {
     period: "2023 — 2024",
     title: "Varsity Member",
     org: "Speech & Debate (Forensics)",
     description:
-      "Competed across the Bay Area in public speaking and performance events.",
+      "Competed in public speaking and performance events around the Bay Area.",
   },
   {
     period: "2022 — 2026",

@@ -23,10 +23,10 @@ const sections = (p: (typeof projects)[number]) =>
   [
     { label: "Overview", body: p.overview },
     { label: "Problem", body: p.problem },
-    { label: "What I Built", body: p.built },
-    { label: "Technical Decisions", body: p.decisions },
-    { label: "Challenges", body: p.challenges },
-    { label: "What I Learned", body: p.learned },
+    { label: "What I made", body: p.built },
+    { label: "Why I built it this way", body: p.decisions },
+    { label: "What was tricky", body: p.challenges },
+    { label: "What I took away", body: p.learned },
   ] as const;
 
 export default async function ProjectPage({
@@ -44,7 +44,7 @@ export default async function ProjectPage({
     <article className="mx-auto max-w-5xl px-6 pb-24 pt-16 sm:pt-20">
       <Reveal>
         <Link href="/#projects" className="link-line mono-meta">
-          ← All Projects
+          ← Back to projects
         </Link>
       </Reveal>
 

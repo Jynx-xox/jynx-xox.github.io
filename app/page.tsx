@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-6">
       {/* ---------- HERO ---------- */}
-      <section className="pb-20 pt-20 sm:pb-28 sm:pt-28">
+      <section className="hero-section pb-20 pt-20 sm:pb-28 sm:pt-28">
         <Reveal>
           <p className="mono-meta mb-6">{site.role}</p>
         </Reveal>
@@ -17,10 +17,10 @@ export default function Home() {
           </h1>
         </Reveal>
         <Reveal delay={120}>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            I’m Ken — a Math–Computer Science student at UC San Diego. I like
-            programming, working through hard problems, and building things
-            that are actually useful.
+          <p className="hero-intro mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            I’m Ken, a Math–Computer Science student at UC San Diego. I like
+            figuring things out, writing code, and making little tools that
+            solve real problems.
           </p>
         </Reveal>
         <Reveal delay={180}>
@@ -75,10 +75,10 @@ export default function Home() {
         <div className="grid gap-10 sm:grid-cols-2">
           <Reveal>
             <p className="max-w-md leading-relaxed text-ink">
-              I’m Ken, a Math–Computer Science student at UC San Diego. I enjoy
-              programming, problem solving, and figuring out how systems work
-              under the hood. Right now I’m building my foundation in software
-              engineering through coursework and projects outside of class.
+              I’m Ken. I study Math–Computer Science at UC San Diego and spend
+              a lot of my free time building things, breaking them, and trying
+              to understand why they work. Most of what I know has come from
+              class, side projects, and helping people with small problems.
             </p>
           </Reveal>
           <Reveal delay={80}>
@@ -198,7 +198,7 @@ export default function Home() {
         <SectionHeading index="05" title="Resume" />
         <Reveal>
           <p className="max-w-md text-sm leading-relaxed text-muted">
-            A PDF version of my resume, kept up to date.
+            Here’s a PDF copy of my resume.
           </p>
           <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3 text-sm">
             <a
@@ -224,8 +224,8 @@ export default function Home() {
             Let’s talk.
           </h3>
           <p className="mt-4 max-w-md leading-relaxed text-muted">
-            The fastest way to reach me is email. I’m also on GitHub and
-            LinkedIn.
+            Email is probably the easiest way to reach me. I’m also on GitHub
+            and LinkedIn.
           </p>
           <ul className="mt-8 space-y-3 text-sm">
             <li>
