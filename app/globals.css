@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #f7f7f5;
-  --color-ink: #111111;
-  --color-muted: #666666;
-  --color-line: #ddddda;
+  --color-bg: #f6f4ef;
+  --color-surface: #efece4;
+  --color-ink: #141311;
+  --color-muted: #71695d;
+  --color-line: #ddd6c8;
   --color-accent: #1f45c4;
+  --color-accent-soft: #e3e8f9;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
@@ -91,6 +93,12 @@ body {
 }
 .project-row:hover .proj-arrow {
   transform: translate(3px, -3px);
+}
+.project-row {
+  transition: background-color 220ms ease;
+}
+.project-row:hover {
+  background-color: var(--color-surface);
 }
 .project-row .proj-title {
   transition: color 220ms ease;

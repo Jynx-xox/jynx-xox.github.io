@@ -10,7 +10,7 @@ export const site = {
   location: "San Diego / Union City, CA",
   email: "kengosti@gmail.com",
   github: "https://github.com/Jynx-xox",
-  linkedin: "https://www.linkedin.com/in/your-handle", // [PLACEHOLDER] add your LinkedIn URL
+  linkedin: "https://www.linkedin.com/in/ken-gosti-77ba01342/",
   resumeUrl: "/resume.pdf", // drop your resume PDF into /public
 };
 
@@ -34,74 +34,8 @@ export type Project = {
 // Add a new project by copying one object; no component changes needed.
 // The bracketed long-form fields below benefit from a few sentences each —
 // send me more detail on any project and I'll expand them.
+// Projects marked private have no public repo, so no links are shown.
 export const projects: Project[] = [
-  {
-    slug: "order-management",
-    title: "Small Business Order Management Platform",
-    year: "2025",
-    description:
-      "A dashboard for a family catering business to manage orders, payments, and pickup dates across 30+ customers.",
-    role: "Solo developer",
-    tech: ["Python", "Flask", "SQLite"],
-    // [PLACEHOLDER repo URL] — point at the real repo if public
-    github: "https://github.com/Jynx-xox",
-    overview:
-      "An internal web dashboard built for a family catering business to replace scattered spreadsheets for tracking customer orders.",
-    problem:
-      "Order, payment, and pickup information for 30+ customers lived in spreadsheets, which made it easy to miss orders, miscalculate totals, or lose track of payment status.",
-    built:
-      "Built the full application: customer search, order filtering, automated totals, duplicate detection, and CSV/Excel export for records.",
-    decisions:
-      "Chose Flask with SQLite for a lightweight, self-hosted tool that runs without external services. [Add more — schema design, why server-rendered, etc.]",
-    challenges:
-      "[What was hardest — e.g. modeling order status, handling edge cases in duplicate customer names.]",
-    learned:
-      "[What you took away — e.g. designing software around a real non-technical user's daily workflow.]",
-  },
-  {
-    slug: "computer-vision-automation",
-    title: "Real-Time Computer Vision Automation",
-    year: "2025",
-    description:
-      "A real-time vision system that detects on-screen events and triggers automated inputs with low latency.",
-    role: "Solo developer",
-    tech: ["Python", "OpenCV"],
-    github: "https://github.com/Jynx-xox", // [PLACEHOLDER repo URL]
-    overview:
-      "A real-time computer vision system that watches for specific visual events and responds with automated keyboard input.",
-    problem:
-      "[What this was for and why manual reaction wasn't good enough — a sentence or two of real context goes here.]",
-    built:
-      "Built the detection pipeline with OpenCV image detection and region-based tracking, plus a configurable hotkey/macros layer for low-latency responses.",
-    decisions:
-      "Used region-based tracking instead of full-frame analysis to improve detection accuracy and timing. [Add more — frame rate targets, matching strategies, etc.]",
-    challenges:
-      "[e.g. tuning detection thresholds, reducing false positives, hitting low-latency targets.]",
-    learned:
-      "[e.g. tradeoffs between detection accuracy and speed in real-time systems.]",
-  },
-  {
-    slug: "attendance-system",
-    title: "Attendance Management System",
-    year: "2024",
-    description:
-      "A web-based check-in system with user management, duplicate prevention, and date filtering.",
-    role: "Solo developer",
-    tech: ["Python", "Flask", "Excel"],
-    github: "https://github.com/Jynx-xox", // [PLACEHOLDER repo URL]
-    overview:
-      "A web-based attendance system for managing and recording participant check-ins.",
-    problem:
-      "[Who used this and what manual process it replaced.]",
-    built:
-      "Implemented user management, duplicate-entry prevention, date filtering, and attendance tracking, with separate admin and general-user functionality backed by persistent database storage.",
-    decisions:
-      "[Why Flask, how the admin/user split was handled, how duplicates are detected.]",
-    challenges:
-      "[What was tricky — e.g. defining duplicates, keeping the general-user flow fast enough for check-in lines.]",
-    learned:
-      "[What you took away — e.g. designing roles and permissions for a real workflow.]",
-  },
   {
     slug: "wardrobe-tracker",
     title: "Wardrobe & Outfit Tracker",
@@ -110,19 +44,82 @@ export const projects: Project[] = [
       "An interactive wardrobe app for organizing clothes, planning outfits, and tracking what you wore.",
     role: "Solo developer",
     tech: ["React", "JavaScript"],
-    github: "https://github.com/Jynx-xox", // [PLACEHOLDER repo URL]
+    live: "https://wardrobe-nine-snowy.vercel.app/",
     overview:
       "An interactive wardrobe application for organizing clothing and tracking daily outfits.",
     problem:
-      "Hard to keep track of what you own and what you've already worn. [A sentence of personal motivation works well here.]",
+      "I built this to stay connected with friends after starting college and living farther apart. It gives us a shared, lightweight way to see each other's daily fits and keep a small part of our day-to-day lives connected.",
     built:
-      "Built inventory management, photo uploads, outfit selection, and calendar-based outfit history, with a customizable interface of clothing categories and outfit “equipment” slots.",
+      "Built a social wardrobe experience with accounts and logins, clothing-item profiles, daily fits, a calendar, friend feeds, following and followers, posts, and likes. Friends can scroll through each other's outfits and clothing collections in one place.",
     decisions:
-      "[Component structure, state management approach, how photo storage is handled.]",
+      "Focused on making the app visual and social rather than text-heavy. The main flows — posting a fit, browsing friends' outfits, and adding clothing — are designed to feel quick and natural on the same timeline.",
     challenges:
-      "[What was hard — e.g. modeling outfits out of items, calendar history queries.]",
+      "The biggest challenge was connecting personal wardrobe data with social features without making the experience feel complicated. The app had to keep calendars, daily fits, posts, likes, follows, and account-specific content consistent as people moved between their own wardrobe and their friends' feeds.",
     learned:
-      "[What you took away — e.g. managing richer client-side state in React.]",
+      "This project taught me how to turn a personal idea into a product people can actually use with friends. It also gave me experience thinking through authenticated users, social relationships, and the many small states behind a seemingly simple feed.",
+  },
+  {
+    slug: "order-management",
+    title: "Small Business Order Management Platform",
+    year: "2025",
+    description:
+      "A dashboard for a family catering business to manage orders, payments, and pickup dates across 30+ customers.",
+    role: "Solo developer",
+    tech: ["Python", "Flask", "SQLite"], // private repo — no link
+    overview:
+      "An internal web dashboard built for a family catering business to replace scattered spreadsheets for tracking customer orders.",
+    problem:
+      "Order, payment, and pickup information for 30+ customers lived in spreadsheets, which made it easy to miss orders, miscalculate totals, or lose track of payment status.",
+    built:
+      "Built the full application: customer search, order filtering, automated totals, duplicate detection, and CSV/Excel export for records.",
+    decisions:
+      "Chose Flask with SQLite for a lightweight, self-hosted tool that could fit the business's existing workflow without requiring a complicated deployment. The interface was designed around quick entry, clear order status, and easy retrieval of customer records.",
+    challenges:
+      "The main challenge was translating an informal, spreadsheet-based process into a structured workflow that still felt simple for non-technical users. I also had to account for duplicate customer names, changing order details, payment status, and exportable records.",
+    learned:
+      "I learned that useful software starts with understanding the user's actual process. A technically simple tool can create a lot of value when it removes repetitive entry and presents information in a way that matches how a business already operates.",
+  },
+  {
+    slug: "computer-vision-automation",
+    title: "Real-Time Computer Vision Automation",
+    year: "2025",
+    description:
+      "A real-time vision system that detects on-screen events and triggers automated inputs with low latency.",
+    role: "Solo developer",
+    tech: ["Python", "OpenCV"], // private repo — no link
+    overview:
+      "A real-time computer vision system that watches for specific visual events and responds with automated keyboard input.",
+    problem:
+      "The system detects QTEs and other on-screen events that require quick responses. Manual input was inconsistent and sometimes inaccurate, so the project explored how computer vision could recognize those events and trigger a response more reliably.",
+    built:
+      "Built the detection pipeline with OpenCV image detection and region-based tracking, plus a configurable hotkey/macros layer for low-latency responses.",
+    decisions:
+      "Used region-based tracking instead of full-frame analysis to reduce unnecessary processing and focus detection on the parts of the screen where relevant events appear. The automation layer was kept configurable so detection and input behavior could be adjusted independently.",
+    challenges:
+      "The main challenge was balancing responsiveness with reliability: detection thresholds needed to be sensitive enough to catch short-lived events without triggering on unrelated visual changes or producing duplicate responses.",
+    learned:
+      "I learned how real-time systems require practical tradeoffs between accuracy, speed, and robustness. Small changes to regions, thresholds, and timing can significantly affect the behavior of an interactive automation tool.",
+  },
+  {
+    slug: "attendance-system",
+    title: "Attendance Management System",
+    year: "2024",
+    description:
+      "A web-based check-in system with user management, duplicate prevention, and date filtering.",
+    role: "Solo developer",
+    tech: ["Python", "Flask", "Excel"], // private repo — no link
+    overview:
+      "A web-based attendance system for managing and recording participant check-ins for a private community organization.",
+    problem:
+      "The organization needed a more consistent way to record attendance than relying on manual sign-in and scattered records. The system gives participants a quick check-in flow while making attendance easier for organizers to review later.",
+    built:
+      "Implemented QR-assisted check-in, user management, duplicate-entry prevention, date filtering, and attendance tracking, with separate admin and general-user functionality backed by persistent database storage.",
+    decisions:
+      "Used Flask for a focused web application and separated the general check-in experience from administrative tools. Attendance records were stored in a structured format so organizers could filter dates, review participation, and export information when needed.",
+    challenges:
+      "The hardest part was making check-in quick for participants while preventing duplicate records and preserving useful administrative controls. The system needed to handle the normal user flow and the less frequent cases where an organizer needed to correct or review attendance data.",
+    learned:
+      "I learned how authentication, roles, validation, and data organization come together in a workflow used by real people. It also reinforced the importance of making common actions fast while keeping administrative details accessible.",
   },
 ];
 
@@ -140,7 +137,7 @@ export const experience: ExperienceItem[] = [
     title: "B.S. Math–Computer Science",
     org: "University of California, San Diego — Class of 2030",
     coursework:
-      "Multivariable Calculus, Differential Equations, Linear Algebra, Statistics",
+      "CSE 11: Introduction to Programming & Computational Problem Solving (Accelerated), Multivariable Calculus, Differential Equations, Linear Algebra, Statistics",
   },
   {
     period: "2025 — Present",
@@ -217,5 +214,12 @@ export const interests = {
     "Automation",
     "Problem Solving",
   ],
-  outside: ["Public speaking", "Mentoring"], // [PLACEHOLDER] add hobbies if you'd like
+  outside: [
+    "Public speaking",
+    "Mentoring",
+    "Basketball",
+    "Reading",
+    "Hiking",
+    "Spending time with friends",
+  ],
 };

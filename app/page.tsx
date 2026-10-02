@@ -108,9 +108,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- SKILLS ---------- */}
+      <section id="skills" className="scroll-mt-20 pb-20 sm:pb-28">
+        <SectionHeading index="02" title="Skills" />
+        <dl className="space-y-5">
+          {skills.map((s, i) => (
+            <Reveal key={s.label} delay={i * 60}>
+              <div className="grid gap-1 border-t border-line pt-5 sm:grid-cols-[10rem_1fr] sm:gap-10">
+                <dt className="mono-meta pt-0.5">{s.label}</dt>
+                <dd className="text-base">{s.items.join(" · ")}</dd>
+              </div>
+            </Reveal>
+          ))}
+        </dl>
+      </section>
+
+      {/* ---------- EXPERIENCE ---------- */}
+      <section id="experience" className="scroll-mt-20 pb-20 sm:pb-28">
+        <SectionHeading index="03" title="Experience & Education" />
+        <ol>
+          {experience.map((e, i) => (
+            <Reveal key={e.title} delay={i * 60}>
+              <li className="grid gap-2 border-t border-line py-6 last:border-b sm:grid-cols-[10rem_1fr] sm:gap-10">
+                <p className="mono-meta pt-1">{e.period}</p>
+                <div>
+                  <h3 className="text-base font-semibold tracking-tight">
+                    {e.title}
+                  </h3>
+                  <p className="text-sm text-muted">{e.org}</p>
+                  {e.description && (
+                    <p className="mt-2 max-w-lg text-sm leading-relaxed">
+                      {e.description}
+                    </p>
+                  )}
+                  {e.coursework && (
+                    <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted">
+                      <span className="text-ink">Relevant coursework:</span>{" "}
+                      {e.coursework}
+                    </p>
+                  )}
+                </div>
+              </li>
+            </Reveal>
+          ))}
+        </ol>
+      </section>
+
       {/* ---------- PROJECTS ---------- */}
       <section id="projects" className="scroll-mt-20 pb-20 sm:pb-28">
-        <SectionHeading index="02" title="Selected Projects" />
+        <SectionHeading index="04" title="Selected Projects" />
         <ol>
           {projects.map((p, i) => (
             <Reveal key={p.slug} delay={i * 60}>
@@ -145,52 +191,6 @@ export default function Home() {
             </Reveal>
           ))}
         </ol>
-      </section>
-
-      {/* ---------- EXPERIENCE ---------- */}
-      <section id="experience" className="scroll-mt-20 pb-20 sm:pb-28">
-        <SectionHeading index="03" title="Experience & Education" />
-        <ol>
-          {experience.map((e, i) => (
-            <Reveal key={e.title} delay={i * 60}>
-              <li className="grid gap-2 border-t border-line py-6 last:border-b sm:grid-cols-[10rem_1fr] sm:gap-10">
-                <p className="mono-meta pt-1">{e.period}</p>
-                <div>
-                  <h3 className="text-base font-semibold tracking-tight">
-                    {e.title}
-                  </h3>
-                  <p className="text-sm text-muted">{e.org}</p>
-                  {e.description && (
-                    <p className="mt-2 max-w-lg text-sm leading-relaxed">
-                      {e.description}
-                    </p>
-                  )}
-                  {e.coursework && (
-                    <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted">
-                      <span className="text-ink">Relevant coursework:</span>{" "}
-                      {e.coursework}
-                    </p>
-                  )}
-                </div>
-              </li>
-            </Reveal>
-          ))}
-        </ol>
-      </section>
-
-      {/* ---------- SKILLS ---------- */}
-      <section id="skills" className="scroll-mt-20 pb-20 sm:pb-28">
-        <SectionHeading index="04" title="Skills" />
-        <dl className="space-y-5">
-          {skills.map((s, i) => (
-            <Reveal key={s.label} delay={i * 60}>
-              <div className="grid gap-1 border-t border-line pt-5 sm:grid-cols-[10rem_1fr] sm:gap-10">
-                <dt className="mono-meta pt-0.5">{s.label}</dt>
-                <dd className="text-base">{s.items.join(" · ")}</dd>
-              </div>
-            </Reveal>
-          ))}
-        </dl>
       </section>
 
       {/* ---------- RESUME ---------- */}
@@ -230,10 +230,7 @@ export default function Home() {
           <ul className="mt-8 space-y-3 text-sm">
             <li>
               <span className="mono-meta mr-6 inline-block w-20">Email</span>
-              <a
-                href={`mailto:${site.email}`}
-                className="link-line text-accent"
-              >
+              <a href={`mailto:${site.email}`} className="link-line text-accent">
                 {site.email}
               </a>
             </li>
