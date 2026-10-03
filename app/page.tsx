@@ -217,14 +217,6 @@ export default function Home() {
               Download Resume ↓
             </a>
           </div>
-          <div className="mt-8 overflow-hidden border border-line bg-white">
-            <iframe
-              src={`${site.resumeUrl}#view=FitH`}
-              title={`${site.name} resume PDF`}
-              className="h-[36rem] w-full sm:h-[48rem]"
-              loading="lazy"
-            />
-          </div>
         </Reveal>
       </section>
 
