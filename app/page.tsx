@@ -209,9 +209,21 @@ export default function Home() {
             >
               View Resume ↗
             </a>
-            <a href={site.resumeUrl} download className="link-line text-ink">
+            <a
+              href={site.resumeUrl}
+              download="Kendeo-Gosti-Resume.pdf"
+              className="link-line text-ink"
+            >
               Download Resume ↓
             </a>
+          </div>
+          <div className="mt-8 overflow-hidden border border-line bg-white">
+            <iframe
+              src={`${site.resumeUrl}#view=FitH`}
+              title={`${site.name} resume PDF`}
+              className="h-[36rem] w-full sm:h-[48rem]"
+              loading="lazy"
+            />
           </div>
         </Reveal>
       </section>
