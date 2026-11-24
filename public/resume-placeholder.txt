@@ -1,2 +1,0 @@
-Replace this file with your actual resume: save it as /public/resume.pdf
-The site's "Resume" links already point to /resume.pdf.
