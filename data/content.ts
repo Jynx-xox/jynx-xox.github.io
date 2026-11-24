@@ -59,6 +59,27 @@ export const projects: Project[] = [
       "The project demonstrated how a small concept can develop into a complete product once other people begin using it. It required practical decisions around authentication, user-generated content, and the details that encourage continued engagement.",
   },
   {
+  slug: "macroai",
+  title: "MacroAI — AI-Powered Nutrition Tracker",
+  year: "2026",
+  description:
+    "An AI-powered nutrition tracking application that simplifies meal logging through natural language and image recognition.",
+  role: "Solo developer",
+  tech: ["React", "JavaScript", "AI Integration"],
+  overview:
+    "A mobile-first nutrition tracking application designed to make tracking calories and macronutrients as simple as having a conversation.",
+  problem:
+    "Traditional nutrition tracking applications often require users to manually search for foods, enter serving sizes, and navigate repetitive forms. This creates unnecessary friction and makes consistent tracking difficult.",
+  built:
+    "The application includes conversational meal logging, AI-powered food recognition, image uploads, editable nutritional estimates, daily macro tracking, personalized goals, and persistent meal history.",
+  decisions:
+    "The application prioritizes a chat-first experience over traditional food search interfaces. A minimalist, mobile-first design keeps meal logging accessible while allowing users to review and adjust AI-generated nutritional estimates.",
+  challenges:
+    "The primary challenge was transforming unstructured food descriptions and images into structured nutritional data while maintaining a responsive and intuitive user experience. Another challenge was keeping meal records, nutritional totals, and AI conversations consistent.",
+  learned:
+    "The project provided practical experience integrating AI into a consumer-facing application, handling unstructured user input, managing persistent data, and designing intuitive interfaces around unpredictable AI-generated outputs.",
+  },
+  {
     slug: "order-management",
     title: "Small Business Order Management Platform",
     year: "2025",
